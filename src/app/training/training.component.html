@@ -1,0 +1,8 @@
+<mat-tab-group fxFlex *ngIf="!onGoingTraining">
+  <mat-tab label="New Excercise">
+    <app-new-training (training)="onGoingTraining = true"></app-new-training>
+  </mat-tab>
+  <mat-tab label="Past Excercise">
+  <app-past-training></app-past-training></mat-tab>
+</mat-tab-group>
+<app-current-training fxFlex="100%" *ngIf="onGoingTraining" (dataTraining)="onGoingTraining = false"></app-current-training>

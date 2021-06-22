@@ -1,0 +1,21 @@
+<div class="section mt-4">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="3rem" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="text-danger" hintLabel="value is not valid">
+      <mat-label  >Email</mat-label>
+      <input formControlName="email" class="text-dark" matInput>
+      <mat-error>is not valid email</mat-error>
+
+
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label  >Password</mat-label>
+      <input formControlName="password" type="password" class="text-dark" matInput>
+      <mat-hint class="text-danger" align="end">{{form.value?.password.length}}  / 6</mat-hint>
+
+
+      <mat-error>value most be than 6</mat-error>
+    </mat-form-field>
+    <button [disabled]="!form.valid" type="submit" mat-raised-button color="primary">submit</button>
+  </form>
+</div>
+

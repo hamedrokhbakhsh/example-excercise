@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <div>
+    <button fxHide.gt-xs mat-icon-button (click)="ontoggle()" mat-raised-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <h1 class="logo">
+    <a routerLink="/">LOGO</a>
+  </h1>
+  <div fxFlex></div>
+  <div class="list-flex" fxLayout fxLayoutAlign="center center" fxHide.xs>
+    <ul fxLayout="row" fxLayoutGap="1rem" class="list">
+      <li>
+        <a routerLink="/login">login</a>
+      </li>
+      <li>
+        <a routerLink="/signup">signup</a>
+
+      </li>
+      <li>
+        <a routerLink="/training">training</a>
+
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
